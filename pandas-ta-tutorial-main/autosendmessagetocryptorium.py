@@ -4,7 +4,7 @@ import requests
 
 from datetime import datetime, time
 
-JBOT_TEST_CHAT_ID = "-1001539836622"
+JBOT_TEST_CHAT_ID = ""
 
 def is_time_between(begin_time, end_time, check_time=None):
     # If check time is not given, default to current UTC time
@@ -17,7 +17,7 @@ def is_time_between(begin_time, end_time, check_time=None):
 
 def send_telegram_message(chatId, message):
     response = requests.post(
-        "https://api.telegram.org/bot1787709456:AAFqgAM0xZAC6Ph7FBVgs-3ZpmTVIkNkgJk/sendMessage?chat_id="+str(chatId)+"&text=" + message)
+        "https://api.telegram.org/<botid>/sendMessage?chat_id="+str(chatId)+"&text=" + message)
 
 
 exchange = ccxt.binance()
