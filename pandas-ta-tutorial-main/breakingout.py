@@ -7,12 +7,12 @@ import pandas_ta as ta
 import pandas as pd
 import requests
 
-JBOT_CHAT_ID = "-1001546947347"
-JBOT_TEST_CHAT_ID = "-1001539836622"
+JBOT_CHAT_ID = ""
+JBOT_TEST_CHAT_ID = ""
 
 def send_telegram_message(chatId, message):
     response = requests.post(
-        "https://api.telegram.org/bot1787709456:AAFqgAM0xZAC6Ph7FBVgs-3ZpmTVIkNkgJk/sendMessage?chat_id="+str(chatId)+"&text=" + message)
+        "https://api.telegram.org/botid/sendMessage?chat_id="+str(chatId)+"&text=" + message)
 
 
 symbols = ['BTC/USDT', 'ETH/USDT']
